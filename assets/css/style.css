@@ -53,7 +53,7 @@ button{
     font-weight: 900;
     outline: none;
     border: none;
-    background-color: #1d1d1d;
+    background-color: #b5abaa;
     color:aliceblue;
     padding: 13px 30px;
     text-transform: uppercase;
@@ -63,7 +63,7 @@ button{
 }
 
 button:hover{
-    background-color: coral;
+    background-color: #81ab49;
 }
 
 .navbar{
@@ -85,7 +85,7 @@ button:hover{
 .navbar i:hover,
 .navbar-light .navbar-nav .nav-link.active
 .navbar i:hover{
-    color:coral;
+    color:#81ab49;
 
 }
 
@@ -118,15 +118,13 @@ button:hover{
     
 }
 
-
-
 #home{
-    background-image: url('../imgs/back.jpeg');
+    background-image: url('../images/home/banner.jpg');
     width: 100%;
     height: 100vh;
     background-size: cover;
-    background-position-x: 200px;
     background-position-y: 80px;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,7 +133,7 @@ button:hover{
 }
 
 #home span{
-    color: coral;
+    color: #81ab49;
 }
 
 #new .one img{
@@ -212,7 +210,7 @@ button:hover{
 }
 
 .product .buy-btn{
-    background-color: #fb774b;
+    background-color: #81ab49;
     transform: translateY(50px);
     opacity: 0;
     transition: 0.3s all;;
@@ -220,7 +218,7 @@ button:hover{
 }
 
 .shop-buy-btn{
-    background-color: #fb774b;
+    background-color: #81ab49;
     opacity: 1;
     color:#fff;
     text-decoration: none;
@@ -237,7 +235,7 @@ hr{
     width: 30px;
     height: 3px !important;
     opacity: 1 !important;
-    background-color: #fb774b;
+    background-color: #81ab49;
 
 }
 
@@ -252,7 +250,7 @@ hr{
 }
 
 #banner{
-    background-image: url('../imgs/banner.jpeg');
+    background-image: url('../images/home/banner-featured.jpg');
     width: 100%;
     height: 60vh;
     background-size: cover;
@@ -275,7 +273,7 @@ hr{
 }
 
 #banner button{
-    background-color: #fb774b;
+    background-color: #b5abaa;
 }
 
 #banner button:hover{
@@ -286,8 +284,12 @@ footer{
     background-color: #222222;
 }
 
+footer .brand {
+    color: #81ab49;
+}
+
 footer h5{
-    color:#D8D8D8;
+    color:#ffffff;
     font-weight: 700;
     font-size: 1.2rem;
 }
@@ -322,7 +324,7 @@ footer .copyright a{
 
 footer .copyright a:hover{
     color:#fff;
-    background-color: #fb774b;
+    background-color: #81ab49;
 }
 
 footer p{
@@ -344,7 +346,7 @@ footer .copyright img{
 
 
 .navbar .brand{
-    color:coral;
+    color:#81ab49;
     margin: 3px 5px;
     font-size: 1.5rem;
 }
@@ -374,7 +376,7 @@ footer .copyright img{
 }
 
 .single-product .buy-btn{
-    background-color: #fb774b;
+    background-color: #81ab49;
     opacity: 1;
     transition: 0.4s all;
 
@@ -384,8 +386,6 @@ footer .copyright img{
     background-color: #222222;
 
 }
-
-
 
 /* Cart */
 
@@ -403,7 +403,7 @@ footer .copyright img{
     text-align: left;
     padding: 5px 10px;
     color:#fff;
-    background-color: #fb774b;
+    background-color: #81ab49;
 }
 
 .cart td{
@@ -423,12 +423,12 @@ footer .copyright img{
 }
 
 .cart td a{
-    color:#fb774b;
+    color:#81ab49;
     
 }
 
 .cart .remove-btn{
-    color: #fb774b;
+    color: #81ab49;
     text-decoration: none;
     font-size: 14px;
     background-color: #fff;
@@ -437,7 +437,7 @@ footer .copyright img{
 }
 
 .cart .edit-btn{
-    color: #fb774b;
+    color: #81ab49;
     text-decoration: none;
     font-size: 15px;
     background-color: #fff;
@@ -457,7 +457,7 @@ footer .copyright img{
 .cart-total table{
     width: 100%;
     max-width: 500px;
-    border-top: 3px solid #fb774b;;
+    border-top: 3px solid #81ab49;;
 }
 
 td:last-child{
@@ -474,7 +474,7 @@ th:last-child{
 }
 
 .checkout-btn{
-    background-color: #fb774b;
+    background-color: #81ab49;
     color: #fff;
 }
 
@@ -486,7 +486,7 @@ th:last-child{
   margin: 5px auto;
   text-align: center;
   padding: 20px;
-  border-top: 1px solid #fb774b;
+  border-top: 1px solid #81ab49;
 }
 
 #login-form input{
@@ -495,12 +495,12 @@ th:last-child{
 }
 
 #login-form #login-btn{
-    background-color: #fb774b;
+    background-color: #81ab49;
     color:#fff
 }
 
 #login-form #register-url{
-    color:#fb774b;
+    color:#81ab49;
 }
 
 
@@ -511,7 +511,7 @@ th:last-child{
   margin: 5px auto;
   text-align: center;
   padding: 20px;
-  border-top: 1px solid #fb774b;
+  border-top: 1px solid #81ab49;
 
 }
 
@@ -521,16 +521,15 @@ th:last-child{
 }
 
 #register-form #register-btn{
-    background-color: #fb774b;
+    background-color: #81ab49;
     color:#fff
 
 }
 
 #register-form #login-url{
-    color:#fb774b;
+    color:#81ab49;
 
 }
-
 
 /* Account */
 
@@ -548,17 +547,15 @@ th:last-child{
 
 #account-form #change-pass-btn{
     color: #fff;
-    background-color: #fb774b;
+    background-color: #81ab49;
 }
 
 
 .account-info #orders-btn,#logout-btn{
-    color:#fb774b;
+    color:#81ab49;
     text-decoration: none;
   
 }
-
-
 
 /* Orders */
 
@@ -575,7 +572,7 @@ th:last-child{
 .orders th{
     padding: 5px 20px;
     color: #fff;
-    background-color: #fb774b;
+    background-color: #81ab49;
     /* text-align: left; */
 }
 
@@ -595,10 +592,8 @@ th:last-child{
 
 .orders .order-details-btn{
     color:#fff;
-    background-color: #fb774b;;
+    background-color: #81ab49;;
 }
-
-
 
 /* Checkout */
 #checkout-form .checkout-small-element{
@@ -619,17 +614,14 @@ th:last-child{
 
 #checkout-form #checkout-btn{
     color: #fff;
-    background-color: #fb774b;
+    background-color: #81ab49;
 }
 
 
 /* Contact */
 #contact span{
-    color: #fb774b;
+    color: #81ab49;
 }
-
-
-
 
 /* Shop */
 #shop{
@@ -645,9 +637,8 @@ th:last-child{
 
 }
 
-
 .cart-quantity{
-    background-color: #fb774b;
+    background-color: #81ab49;
     color: #fff;
     padding: 1px 5px;
     border-radius: 50%;

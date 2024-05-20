@@ -86,68 +86,43 @@ if (isset($_POST['search'])) {
 
 ?>
 
-
-
-
-
-
-
-
-
-
-
 <!--Search-->
 <section id="search" class="my-5 py-5 ms-2">
   <div class="container mt-5 py-5">
     <p>Search Products</p>
     <hr>
   </div>
-
   <form action="shop.php" method="POST">
     <div class="row mx-auto container">
       <div class="col-lg-12 col-md-12 col-sm-12">
-
-
         <p>Category</p>
         <div class="form-check">
-          <input class="form-check-input" value="shoes" type="radio" name="category" id="category_one" <?php if (isset($category) && $category == 'shoes') {
-                                                                                                          echo 'checked';
-                                                                                                        } ?>>
+          <input class="form-check-input" value="cameras" type="radio" name="category" id="category_one" <?php if (isset($category) && $category == 'cameras') {echo 'checked';                                                                                     } ?>>
           <label class="form-check-label" for="flexRadioDefault1">
-            Shoes
+            Cameras
           </label>
         </div>
 
         <div class="form-check">
-          <input class="form-check-input" value="coats" type="radio" name="category" id="category_two" <?php if (isset($category) && $category == 'coats') {
+          <input class="form-check-input" value="lenses" type="radio" name="category" id="category_two" <?php if (isset($category) && $category == 'lenses') {
                                                                                                           echo 'checked';
                                                                                                         } ?>>
           <label class="form-check-label" for="flexRadioDefault2">
-            Coats
+            Lenses
           </label>
         </div>
 
         <div class="form-check">
-          <input class="form-check-input" value="watches" type="radio" name="category" id="category_two" <?php if (isset($category) && $category == 'watches') {
+          <input class="form-check-input" value="tripods" type="radio" name="category" id="category_two" <?php if (isset($category) && $category == 'tripods') {
                                                                                                             echo 'checked';
                                                                                                           } ?>>
           <label class="form-check-label" for="flexRadioDefault2">
-            Watches
-          </label>
-        </div>
-
-        <div class="form-check">
-          <input class="form-check-input" value="bags" type="radio" name="category" id="category_two" <?php if (isset($category) && $category == 'bags') {
-                                                                                                        echo 'checked';
-                                                                                                      } ?>>
-          <label class="form-check-label" for="flexRadioDefault2">
-            Bags
+            Tripods
           </label>
         </div>
 
       </div>
     </div>
-
 
     <div class="row mx-auto container mt-5">
       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -174,16 +149,6 @@ if (isset($_POST['search'])) {
 
 </section>
 
-
-
-
-
-
-
-
-
-
-
 <!--Shop-->
 <section id="shop" class="my-5 py-5">
   <div class="container mt-5 py-5">
@@ -192,12 +157,10 @@ if (isset($_POST['search'])) {
     <p>Here you can check out our products</p>
   </div>
   <div class="row mx-auto container">
-
-
     <?php while ($row = $products->fetch_assoc()) { ?>
 
-      <div onclick="window.location.href='single_product.html';" class="product text-center col-lg-3 col-md-4 col-sm-12">
-        <img class="img-fluid mb-3" src="assets/imgs/<?php echo $row['product_image']; ?>" />
+      <div onclick="window.location.href='single_product.php';" class="product text-center col-lg-3 col-md-4 col-sm-12">
+        <img class="img-fluid mb-3" src="assets/images/products/<?php echo $row['product_image']; ?>" />
         <div class="star">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -206,16 +169,11 @@ if (isset($_POST['search'])) {
           <i class="fas fa-star"></i>
         </div>
         <h5 class="p-name"><?php echo $row['product_name']; ?></h5>
-        <h4 class="p-price">$<?php echo $row['product_price']; ?></h4>
+        <h4 class="p-price">R<?php echo $row['product_price']; ?></h4>
         <a class="btn shop-buy-btn" href="<?php echo "single_product.php?product_id=" . $row['product_id']; ?>">Buy Now</a>
       </div>
 
-
     <?php } ?>
-
-
-
-
     <nav aria-label="Page navigation example" class="mx-auto">
       <ul class="pagination mt-5 mx-auto">
 
@@ -252,20 +210,7 @@ if (isset($_POST['search'])) {
       </ul>
     </nav>
 
-
-
-
-
-
-
   </div>
 </section>
-
-
-
-
-
-
-
 
 <?php include('layouts/footer.php'); ?>

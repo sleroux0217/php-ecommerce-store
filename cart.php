@@ -129,10 +129,10 @@ function calculateTotalCart()
         <tr>
           <td>
             <div class="product-info">
-              <img src="assets/imgs/<?php echo $value['product_image']; ?>" />
+              <img src="assets/images/products/<?php echo $value['product_image']; ?>" />
               <div>
                 <p><?php echo $value['product_name']; ?></p>
-                <small><span>$</span><?php echo $value['product_price']; ?></small>
+                <small><span>R</span><?php echo $value['product_price']; ?></small>
                 <br>
                 <form method="POST" action="cart.php">
                   <input type="hidden" name="product_id" value="<?php echo $value['product_id']; ?>" />
