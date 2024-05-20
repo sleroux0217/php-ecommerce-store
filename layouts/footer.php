@@ -8,12 +8,9 @@
           <div class="footer-one col-lg-3 col-md-6 col-sm-12">
            <h5 class="pb-2">Featured</h5>
            <ul class="text-uppercase">
-             <li><a href="#">men</a></li>
-             <li><a href="#">women</a></li>
-             <li><a href="#">boys</a></li>
-             <li><a href="#">girls</a></li>
-             <li><a href="#">new arrivals</a></li>
-             <li><a href="#">clothes</a></li>
+             <li><a href="#">Cameras</a></li>
+             <li><a href="#">Lenses</a></li>
+             <li><a href="#">Tripods</a></li>
            </ul>
           </div>
 
@@ -35,11 +32,10 @@
           <div class="footer-one col-lg-3 col-md-6 col-sm-12">
             <h5 class="pb-2">Instagram</h5>
             <div class="row">
-              <img src="assets/images/featured1.jpeg" class="img-fluid w-25 h-100 m-2"/>
-              <img src="assets/images/featured2.jpeg" class="img-fluid w-25 h-100 m-2"/>
-              <img src="assets/images/featured3.jpeg" class="img-fluid w-25 h-100 m-2"/>
-              <img src="assets/images/featured4.jpeg" class="img-fluid w-25 h-100 m-2"/>
-              <img src="assets/images/clothes1.jpeg" class="img-fluid w-25 h-100 m-2"/>
+              <img src="assets/images/featured/featured1.jpg" class="img-fluid w-25 h-100 m-2"/>
+              <img src="assets/images/featured/featured2.jpg" class="img-fluid w-25 h-100 m-2"/>
+              <img src="assets/images/featured/featured3.jpg" class="img-fluid w-25 h-100 m-2"/>
+              <img src="assets/images/featured/featured4.jpg" class="img-fluid w-25 h-100 m-2"/>
             </div>
           </div>
         </div>
@@ -47,7 +43,7 @@
         <div class="copyright mt-5">
           <div class="row container mx-auto">
             <div class="col-lg-3 col-md-5 col-sm-12 mb-4">
-              <img src="assets/images/payment.jpeg"/>
+              <img src="assets/images/payment/payment.jpeg"/>
             </div>
             <div class="col-lg-3 col-md-5 col-sm-12 mb-4 text-nowrap mb-2">
               <p>Outdoorphoto @ 2024 All Right Reserved</p>
