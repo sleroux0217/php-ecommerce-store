@@ -29,7 +29,7 @@ session_start();
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
         <div class="container">
          <!-- <img class="logo" src="assets/imgs/logo.jpeg" /> -->
-         <h2 class="brand">Outdoorphoto</h2>
+         <a href="/" style="text-decoration: none;"><h2 class="brand">Outdoorphoto</h2></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

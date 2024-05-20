@@ -1,9 +1,6 @@
 <?php include('header.php'); ?>
 
-
-
 <?php
-
 
 if(isset($_GET['order_id'])){
 
@@ -28,21 +25,13 @@ if(isset($_GET['order_id'])){
           header('location: index.php?order_failed=Error occured, try again');
         }
 
-
-
-
 }else{
 
   header('location: index.php');
   exit;
 }
 
-
-
-
 ?>
-
-
 
 <div class="container-fluid">
   <div class="row"  style="min-height: 1000px">
@@ -60,14 +49,9 @@ if(isset($_GET['order_id'])){
         </div>
       </div>
 
-    
-
       <h2>Edit Order</h2>
       <div class="table-responsive">
-      
-
-
-
+    
           <div class="mx-auto container">
               <form id="edit-order-form"  method="POST" action="edit_order.php">
 
@@ -84,7 +68,6 @@ if(isset($_GET['order_id'])){
                         <p class="my-4"><?php echo $r['order_cost'];?></p>
                     
                   </div>
-
 
                   <input type="hidden" name="order_id" value="<?php echo $r['order_id'];?>"/>
          
@@ -103,27 +86,17 @@ if(isset($_GET['order_id'])){
                          <label>OrderDate</label>
                     <p class="my-4"><?php echo $r['order_date'];?></p>
 
-                    
                   </div>
-
-            
-
 
                 <div class="form-group mt-3">
                     <input type="submit" class="btn btn-primary" name="edit_order" value="Edit"/>
                 </div>
  
-
-
                 <?php } ?>
 
               </form>
           </div>
     
-
-
-
-
       </div>
     </main>
   </div>

@@ -55,7 +55,7 @@ if (!empty($_SESSION['cart'])) {
         <input type="text" class="form-control" id="checkout-address" name="address" placeholder="Address" required />
       </div>
       <div class="form-group checkout-btn-container">
-        <p>Total amount: $<?php echo $_SESSION['total']; ?></p>
+        <p>Total amount: R<?php echo $_SESSION['total']; ?></p>
         <input type="submit" class="btn" id="checkout-btn" name="place_order" value="Place Order" />
       </div>
     </form>

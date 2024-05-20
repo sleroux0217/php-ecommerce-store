@@ -48,9 +48,9 @@ if (isset($_GET['product_id'])) {
       </div>
 
       <div class="col-lg-6 col-md-12 col-12">
-        <h6>Men/Shoes</h6>
+        <h6>Cameras/Lenses/Tripods</h6>
         <h3 class="py-4"><?php echo $row['product_name']; ?></h3>
-        <h2>$<?php echo $row['product_price']; ?></h2>
+        <h2>R <?php echo $row['product_price']; ?></h2>
 
         <form method="POST" action="cart.php">
           <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>" />
@@ -133,8 +133,6 @@ if (isset($_GET['product_id'])) {
     </div>
   </div>
 </section>
-
-<?php include('layouts/footer.php'); ?>
 
 <script>
   var mainImg = document.getElementById("mainImg");

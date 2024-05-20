@@ -12,7 +12,6 @@ if(isset($_SESSION['admin_logged_in'])){
 
 if(isset($_POST['login_btn'])){
 
-
   $email = $_POST['email'];
   $password = md5($_POST['password']);
 
@@ -31,7 +30,6 @@ if(isset($_POST['login_btn'])){
         $_SESSION['admin_name'] = $admin_name;
         $_SESSION['admin_email'] = $admin_email;
         $_SESSION['admin_logged_in'] = true;
-
      
         header('location: index.php?login_success=logged in successfully');
 
@@ -45,24 +43,12 @@ if(isset($_POST['login_btn'])){
 
   }
 
-
 }
-
 
 ?>
 
-
-
-
-
-
-
-
-
-
 <div class="container-fluid">
   <div class=""  style="min-height: 1000px">
-   
 
     <main class="col-md-6 mx-auto col-lg-6 px-md-4 text-center">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -75,13 +61,9 @@ if(isset($_POST['login_btn'])){
         </div>
       </div>
 
-    
-
       <h2>Login</h2>
       <div class="table-responsive">
       
-
-
           <div class="mx-auto container">
               <form id="login-form"  enctype="multipart/form-data" method="POST" action="login.php">
                 <p style="color: red;"><?php if(isset($_GET['error'])){ echo $_GET['error']; }?></p>
@@ -93,8 +75,6 @@ if(isset($_POST['login_btn'])){
                       <label>Password</label>
                       <input type="password" class="form-control" id="product-desc" name="password" placeholder="Password" required/>
                   </div>
-              
-
 
                 <div class="form-group mt-3">
                     <input type="submit" class="btn btn-primary"  name="login_btn" value="Login"/>
@@ -102,19 +82,11 @@ if(isset($_POST['login_btn'])){
  
               </form>
           </div>
-    
-
-
-
 
       </div>
     </main>
   </div>
 </div>
-
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 

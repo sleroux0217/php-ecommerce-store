@@ -8,7 +8,7 @@ if (isset($_POST['add_to_cart'])) {
   if (isset($_SESSION['cart'])) {
 
     $products_array_ids = array_column($_SESSION['cart'], "product_id"); // [2,3,4,10,15]
-    //if product has already been addedcto cart or not
+    //if product has already been added to cart or not
     if (!in_array($_POST['product_id'], $products_array_ids)) {
 
       $product_id = $_POST['product_id'];
@@ -174,7 +174,7 @@ function calculateTotalCart()
       <tr>
         <td>Total</td>
         <?php if (isset($_SESSION['cart'])) { ?>
-          <td>$<?php echo $_SESSION['total']; ?></td>
+          <td>R <?php echo $_SESSION['total']; ?></td>
         <?php } ?>
       </tr>
     </table>

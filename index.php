@@ -74,7 +74,7 @@
           <i class="fas fa-star"></i>
         </div>
         <h5 class="p-name"><?php echo $row['product_name']; ?></h5>
-        <h4 class="p-price">$ <?php echo $row['product_price']; ?></h4>
+        <h4 class="p-price">R <?php echo $row['product_price']; ?></h4>
         <a href="<?php echo "single_product.php?product_id=" . $row['product_id']; ?>"><button class="buy-btn">Buy Now</button></a>
       </div>
     <?php } ?>
@@ -93,17 +93,17 @@
 
 
 <!--Cameras-->
-<section id="featured" class="my-5">
+<section id="cameras" class="my-5">
   <div class="container text-center mt-5 py-5">
     <h3>Cameras</h3>
     <hr class="mx-auto">
     <p>Here you can check out our amazing Cameras</p>
   </div>
   <div class="row mx-auto container-fluid">
-    <?php include('server/get_coats.php'); ?>
-    <?php while ($row = $coats_products->fetch_assoc()) { ?>
+    <?php include('server/get_cameras.php'); ?>
+    <?php while ($row = $cameras_products->fetch_assoc()) { ?>
       <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-        <img class="img-fluid mb-3" src="assets/imgs/<?php echo $row['product_image']; ?>" />
+        <img class="img-fluid mb-3" src="assets/images/products/<?php echo $row['product_image']; ?>" />
         <div class="star">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -112,7 +112,7 @@
           <i class="fas fa-star"></i>
         </div>
         <h5 class="p-name"><?php echo $row['product_name']; ?></h5>
-        <h4 class="p-price">$ <?php echo $row['product_price']; ?> </h4>
+        <h4 class="p-price">R <?php echo $row['product_price']; ?> </h4>
         <a href="<?php echo "single_product.php?product_id=" . $row['product_id']; ?>"><button class="buy-btn">Buy Now</button></a>
       </div>
     <?php } ?>
@@ -120,17 +120,17 @@
 </section>
 
 <!--Lenses-->
-<section id="watches" class="my-5">
+<section id="lenses" class="my-5">
   <div class="container text-center mt-5 py-5">
     <h3>Best Lenses</h3>
     <hr class="mx-auto">
     <p>Check out our unique Lenses</p>
   </div>
   <div class="row mx-auto container-fluid">
-    <?php include('server/get_watches.php'); ?>
-    <?php while ($row = $watches->fetch_assoc()) { ?>
+    <?php include('server/get_lenses.php'); ?>
+    <?php while ($row = $lenses->fetch_assoc()) { ?>
       <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-        <img class="img-fluid mb-3" src="assets/imgs/<?php echo $row['product_image']; ?>" />
+        <img class="img-fluid mb-3" src="assets/images/products/<?php echo $row['product_image']; ?>" />
         <div class="star">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -139,7 +139,7 @@
           <i class="fas fa-star"></i>
         </div>
         <h5 class="p-name"><?php echo $row['product_name']; ?></h5>
-        <h4 class="p-price">$<?php echo $row['product_price']; ?></h4>
+        <h4 class="p-price">R <?php echo $row['product_price']; ?></h4>
         <a href="<?php echo "single_product.php?product_id=" . $row['product_id']; ?>"><button class="buy-btn">Buy Now</button></a>
       </div>
     <?php } ?>
@@ -147,17 +147,17 @@
 </section>
 
 <!--Tripods-->
-<section id="shoes" class="my-5">
+<section id="tripods" class="my-5">
   <div class="container text-center mt-5 py-5">
     <h3>Tripods</h3>
     <hr class="mx-auto">
     <p>Here you can check out our Tripods</p>
   </div>
   <div class="row mx-auto container-fluid">
-    <?php include('server/get_shoes.php'); ?>
-    <?php while ($row = $shoes->fetch_assoc()) { ?>
+    <?php include('server/get_tripods.php'); ?>
+    <?php while ($row = $tripods->fetch_assoc()) { ?>
       <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-        <img class="img-fluid mb-3" src="assets/imgs/<?php echo $row['product_image']; ?>" />
+        <img class="img-fluid mb-3" src="assets/images/products/<?php echo $row['product_image']; ?>" />
         <div class="star">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -166,7 +166,7 @@
           <i class="fas fa-star"></i>
         </div>
         <h5 class="p-name"><?php echo $row['product_name']; ?></h5>
-        <h4 class="p-price">$<?php echo $row['product_price']; ?></h4>
+        <h4 class="p-price">R <?php echo $row['product_price']; ?></h4>
         <a href="<?php echo "single_product.php?product_id=" . $row['product_id']; ?>"><button class="buy-btn">Buy Now</button></a>
       </div>
     <?php } ?>

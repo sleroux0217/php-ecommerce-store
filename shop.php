@@ -98,7 +98,7 @@ if (isset($_POST['search'])) {
         <p>Category</p>
         <div class="form-check">
           <input class="form-check-input" value="cameras" type="radio" name="category" id="category_one" <?php if (isset($category) && $category == 'cameras') {echo 'checked';                                                                                     } ?>>
-          <label class="form-check-label" for="flexRadioDefault1">
+          <label class="form-check-label" for="category_one">
             Cameras
           </label>
         </div>
@@ -107,16 +107,16 @@ if (isset($_POST['search'])) {
           <input class="form-check-input" value="lenses" type="radio" name="category" id="category_two" <?php if (isset($category) && $category == 'lenses') {
                                                                                                           echo 'checked';
                                                                                                         } ?>>
-          <label class="form-check-label" for="flexRadioDefault2">
+          <label class="form-check-label" for="category_two">
             Lenses
           </label>
         </div>
 
         <div class="form-check">
-          <input class="form-check-input" value="tripods" type="radio" name="category" id="category_two" <?php if (isset($category) && $category == 'tripods') {
+          <input class="form-check-input" value="tripods" type="radio" name="category" id="category_three" <?php if (isset($category) && $category == 'tripods') {
                                                                                                             echo 'checked';
                                                                                                           } ?>>
-          <label class="form-check-label" for="flexRadioDefault2">
+          <label class="form-check-label" for="category_three">
             Tripods
           </label>
         </div>
@@ -135,7 +135,7 @@ if (isset($_POST['search'])) {
                                                                         } ?>" min="1" max="1000" id="customRange2">
         <div class="w-50">
           <span style="float: left;">1</span>
-          <span style="float:right;">1000</span>
+          <span style="float:right;">9999</span>
         </div>
       </div>
     </div>
@@ -159,7 +159,7 @@ if (isset($_POST['search'])) {
   <div class="row mx-auto container">
     <?php while ($row = $products->fetch_assoc()) { ?>
 
-      <div onclick="window.location.href='single_product.php';" class="product text-center col-lg-3 col-md-4 col-sm-12">
+      <div onclick="window.location.href='single_product.';" class="product text-center col-lg-3 col-md-4 col-sm-12">
         <img class="img-fluid mb-3" src="assets/images/products/<?php echo $row['product_image']; ?>" />
         <div class="star">
           <i class="fas fa-star"></i>

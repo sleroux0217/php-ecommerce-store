@@ -1,8 +1,6 @@
 <?php include('header.php'); ?>
 
-
 <?php
-
 
    if(isset($_GET['product_id'])){
 
@@ -32,9 +30,6 @@
         }else{
              header('location: products.php?edit_failure_message=Error occured, try again');
         }
-
-
-   
    
   }else{
      header('location: products.php');
@@ -47,7 +42,6 @@
 <div class="container-fluid">
   <div class="row"  style="min-height: 1000px">
    <?php include('sidemenu.php'); ?>
-
               
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -60,13 +54,9 @@
         </div>
       </div>
 
-    
-
       <h2>Edit Product</h2>
       <div class="table-responsive">
       
-
-
           <div class="mx-auto container">
               <form id="edit-form"  method="POST" action="edit_product.php">
                 <p style="color: red;"><?php if(isset($_GET['error'])){ echo $_GET['error']; }?></p>
@@ -90,10 +80,9 @@
                 <div class="form-group mt-2">
                     <label>Category</label>
                     <select  class="form-select" required name="category" >
-                        <option value="bags">Bags</option>
-                        <option value="shoes">Shoes</option>
-                        <option value="watches">Watches</option>
-                        <option value="clothes">Clothes</option>
+                        <option value="cameras">Cameras</option>
+                        <option value="lenses">Lenses</option>
+                        <option value="tripods">Tripods</option>
                     </select>
                 </div>
                 
@@ -107,8 +96,6 @@
                     <input type="number" class="form-control" value="<?php echo $product['product_special_offer']?>"  id="product-offer" name="offer" placeholder="Sale %" required/>
                 </div>
 
-               
-
                 <div class="form-group mt-3">
                     <input type="submit" class="btn btn-primary" name="edit_btn" value="Edit"/>
                 </div>
@@ -117,19 +104,10 @@
  
               </form>
           </div>
-    
-
-
-
-
       </div>
     </main>
   </div>
 </div>
-
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
