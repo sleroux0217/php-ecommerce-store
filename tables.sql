@@ -1,5 +1,9 @@
-
-
+CREATE TABLE IF NOT EXISTS `admins` (
+  'admin_id' int(11) NOT NULL AUTO_INCREMENT,
+  'admin_name' varchar(100) NOT NULL,
+  'admin_email' varchar(100) NOT NULL,
+  'admin_password' varchar(100) NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `products` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -17,7 +21,6 @@ CREATE TABLE IF NOT EXISTS `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-
 CREATE TABLE IF NOT EXISTS `orders` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_cost` decimal(6,2) NOT NULL,
@@ -30,18 +33,18 @@ CREATE TABLE IF NOT EXISTS `orders` (
   PRIMARY KEY (`order_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
 CREATE TABLE IF NOT EXISTS `order_items` (
   `item_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `product_id` varchar(255) NOT NULL,
   `product_name` varchar(255) NOT NULL,
   `product_image` varchar(255) NOT NULL,
+  `product_price` decimal(6,2) NOT NULL,
+  `product_quantity` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `order_date` DATETIME  NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`item_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -52,8 +55,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `UX_Constraint` (`user_email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
-
 CREATE TABLE IF NOT EXISTS `payments` (
   `payment_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
@@ -61,4 +62,3 @@ CREATE TABLE IF NOT EXISTS `payments` (
   `transaction_id` varchar(250) NOT NULL,
   PRIMARY KEY (`payment_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-

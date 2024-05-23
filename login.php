@@ -45,27 +45,27 @@ if (isset($_POST['login_btn'])) {
 <!--Login-->
 <section class="my-5 py-5">
   <div class="container text-center mt-3 pt-5">
-    <h2 class="form-weight-bold">Login</h2>
-    <hr class="mx-auto">
+    <h2 class="font-weight-bold">Login</h2>
+    <hr class="mx-auto w-25">
   </div>
-  <div class="mx-auto container">
-    <form id="login-form" method="POST" action="login.php">
-      <p style="color:red" class="text-center"><?php if (isset($_GET['error'])) {
-                                                  echo $_GET['error'];
-                                                } ?></p>
-      <div class="form-group">
-        <label>Email</label>
+  <div class="container">
+    <form id="login-form" method="POST" action="login.php" class="mx-auto">
+      <p class="text-danger text-center">
+        <?php if (isset($_GET['error'])) { echo $_GET['error']; } ?>
+      </p>
+      <div class="form-group mb-3">
+        <label for="login-email">Email</label>
         <input type="text" class="form-control" id="login-email" name="email" placeholder="Email" required />
       </div>
-      <div class="form-group">
-        <label>Password</label>
+      <div class="form-group mb-4">
+        <label for="login-password">Password</label>
         <input type="password" class="form-control" id="login-password" name="password" placeholder="Password" required />
       </div>
-      <div class="form-group">
-        <input type="submit" class="btn" id="login-btn" name="login_btn" value="Login" />
+      <div class="form-group mb-3">
+        <input type="submit" class="btn btn-primary btn-lg w-100" id="login-btn" name="login_btn" value="Login" />
       </div>
       <div class="form-group">
-        <a id="register-url" href="register.php" class="btn">Don't have account? Register</a>
+        <a id="register-url" href="register.php" class="btn btn-link w-100">Don't have an account? Register</a>
       </div>
     </form>
   </div>

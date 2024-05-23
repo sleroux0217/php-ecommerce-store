@@ -67,38 +67,38 @@ if (isset($_POST['register'])) {
 
 ?>
 
-<!--Resgister-->
+<!--Register-->
 <section class="my-5 py-5">
   <div class="container text-center mt-3 pt-5">
-    <h2 class="form-weight-bold">Register</h2>
-    <hr class="mx-auto">
+    <h2 class="font-weight-bold">Register</h2>
+    <hr class="mx-auto w-25">
   </div>
-  <div class="mx-auto container">
-    <form id="register-form" method="POST" action="register.php">
-      <p style="color: red;"><?php if (isset($_GET['error'])) {
-                                echo $_GET['error'];
-                              } ?></p>
-      <div class="form-group">
-        <label>Name</label>
+  <div class="container">
+    <form id="register-form" method="POST" action="register.php" class="mx-auto">
+      <p class="text-danger text-center">
+        <?php if (isset($_GET['error'])) { echo $_GET['error']; } ?>
+      </p>
+      <div class="form-group mb-3">
+        <label for="register-name">Name</label>
         <input type="text" class="form-control" id="register-name" name="name" placeholder="Name" required />
       </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="text" class="form-control" id="register-email" name="email" placeholder="Email" required />
+      <div class="form-group mb-3">
+        <label for="register-email">Email</label>
+        <input type="email" class="form-control" id="register-email" name="email" placeholder="Email" required />
       </div>
-      <div class="form-group">
-        <label>Password</label>
+      <div class="form-group mb-3">
+        <label for="register-password">Password</label>
         <input type="password" class="form-control" id="register-password" name="password" placeholder="Password" required />
       </div>
-      <div class="form-group">
-        <label>Confirm Password</label>
+      <div class="form-group mb-4">
+        <label for="register-confirm-password">Confirm Password</label>
         <input type="password" class="form-control" id="register-confirm-password" name="confirmPassword" placeholder="Confirm Password" required />
       </div>
-      <div class="form-group">
-        <input type="submit" class="btn" id="register-btn" name="register" value="Register" />
+      <div class="form-group mb-3">
+        <input type="submit" class="btn btn-primary btn-lg w-100" id="register-btn" name="register" value="Register" />
       </div>
-      <div class="form-group">
-        <a id="login-url" href="login.php" class="btn">Do you have an account? Login</a>
+      <div class="form-group text-center">
+        <a id="login-url" href="login.php" class="btn btn-link">Do you have an account? Login</a>
       </div>
     </form>
   </div>

@@ -126,6 +126,7 @@ button:hover{
     background-position-y: 80px;
     background-repeat: no-repeat;
     display: flex;
+    color: #81ab49;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
