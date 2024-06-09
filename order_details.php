@@ -1,7 +1,5 @@
-<?php include('layouts/header.php'); ?>
-
 <?php
-
+session_start();
 /*
   not paid
   shipped
@@ -50,6 +48,8 @@ function calculateTotalOrderPrice($order_details)
 }
 
 ?>
+
+<?php include('layouts/header.php'); ?>
 
 <!--Order details-->
 <section id="orders" class="orders container my-5 py-3">

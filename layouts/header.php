@@ -1,9 +1,6 @@
 <?php
-
 session_start();
-
 //include('../server/connection.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +24,7 @@ session_start();
 
 <body>
 
-<!--Navbar-->
+  <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top shadow-sm">
     <div class="container">
       <a href="/" class="navbar-brand">

@@ -1,8 +1,9 @@
 CREATE TABLE IF NOT EXISTS `admins` (
-  'admin_id' int(11) NOT NULL AUTO_INCREMENT,
-  'admin_name' varchar(100) NOT NULL,
-  'admin_email' varchar(100) NOT NULL,
-  'admin_password' varchar(100) NOT NULL,
+  `admin_id` int(11) NOT NULL AUTO_INCREMENT,
+  `admin_name` varchar(100) NOT NULL,
+  `admin_email` varchar(100) NOT NULL,
+  `admin_password` varchar(100) NOT NULL,
+  PRIMARY KEY (`admin_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `products` (

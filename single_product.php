@@ -1,7 +1,5 @@
-<?php include('layouts/header.php'); ?>
-
 <?php
-
+session_start();
 include('server/connection.php');
 
 if (isset($_GET['product_id'])) {
@@ -20,8 +18,9 @@ if (isset($_GET['product_id'])) {
 
   header('location: index.php');
 }
-
 ?>
+
+<?php include('layouts/header.php'); ?>
 
 <!--Single product-->
 <section class="container single-product my-5 pt-5">

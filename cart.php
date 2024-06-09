@@ -1,7 +1,5 @@
-<?php include('layouts/header.php'); ?>
-
 <?php
-
+session_start();
 if (isset($_POST['add_to_cart'])) {
 
   //if user has already added a product to cart
@@ -105,8 +103,9 @@ function calculateTotalCart()
   $_SESSION['total'] = $total_price;
   $_SESSION['quantity'] = $total_quantity;
 }
-
 ?>
+
+<?php include('layouts/header.php'); ?>
 
 <!--Cart-->
 <section class="cart container my-5 py-5">

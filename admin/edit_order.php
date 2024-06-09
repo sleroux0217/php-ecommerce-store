@@ -1,5 +1,3 @@
-<?php include('header.php'); ?>
-
 <?php
 
 if(isset($_GET['order_id'])){
@@ -30,8 +28,9 @@ if(isset($_GET['order_id'])){
   header('location: index.php');
   exit;
 }
-
 ?>
+
+<?php include('header.php'); ?>
 
 <div class="container-fluid">
   <div class="row"  style="min-height: 1000px">
@@ -101,10 +100,6 @@ if(isset($_GET['order_id'])){
     </main>
   </div>
 </div>
-
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 

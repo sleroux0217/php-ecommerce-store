@@ -1,7 +1,5 @@
-<?php include('layouts/header.php'); ?>
-
 <?php
-
+session_start();
 include('server/connection.php');
 
 //if user has already registered, then take user to account page            
@@ -64,8 +62,9 @@ if (isset($_POST['register'])) {
     }
   }
 }
-
 ?>
+
+<?php include('layouts/header.php'); ?>
 
 <!--Register-->
 <section class="my-5 py-5">

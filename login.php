@@ -1,7 +1,5 @@
-<?php include('layouts/header.php'); ?>
-
 <?php
-
+session_start();
 include('server/connection.php');
 
 if (isset($_SESSION['logged_in'])) {
@@ -39,8 +37,9 @@ if (isset($_POST['login_btn'])) {
     header('location: login.php?error=something went wrong');
   }
 }
-
 ?>
+
+<?php include('layouts/header.php'); ?>
 
 <!--Login-->
 <section class="my-5 py-5">

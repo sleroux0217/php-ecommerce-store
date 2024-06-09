@@ -1,7 +1,5 @@
-<?php include('layouts/header.php'); ?>
-
 <?php
-
+session_start();
 include('server/connection.php');
 
 //use the search section
@@ -83,8 +81,9 @@ if (isset($_POST['search'])) {
   $stmt2->execute();
   $products = $stmt2->get_result();
 }
-
 ?>
+
+<?php include('layouts/header.php'); ?>
 
 <!--Search-->
 <section id="search" class="my-5 py-5 ms-2">

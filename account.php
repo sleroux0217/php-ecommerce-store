@@ -1,7 +1,5 @@
-<?php include('layouts/header.php'); ?>
-
 <?php
-
+session_start();
 include('server/connection.php');
 
 if (!isset($_SESSION['logged_in'])) {
@@ -61,8 +59,9 @@ if (isset($_SESSION['logged_in'])) {
   $orders = $stmt->get_result(); //[]
 
 }
-
 ?>
+
+<?php include('layouts/header.php'); ?>
 
 <!--Account-->
 <section class="my-5 py-5">

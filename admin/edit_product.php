@@ -1,5 +1,3 @@
-<?php include('header.php'); ?>
-
 <?php
 
    if(isset($_GET['product_id'])){
@@ -35,9 +33,9 @@
      header('location: products.php');
      exit;
    }
-
-
 ?>
+
+<?php include('header.php'); ?>
 
 <div class="container-fluid">
   <div class="row"  style="min-height: 1000px">
