@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('../server/connection.php');
 
 if(isset($_SESSION['admin_logged_in'])){

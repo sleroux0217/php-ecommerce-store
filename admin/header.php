@@ -1,8 +1,7 @@
-<?php
+<?php 
 session_start();
+include('../server/connection.php');
 ?>
-
-<?php include('../server/connection.php'); ?>
 
 <!doctype html>
 <html lang="en">

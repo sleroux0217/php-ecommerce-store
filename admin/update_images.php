@@ -33,3 +33,4 @@ if (isset($_POST['update_images'])) {
         header('location: products.php?images_failed=Error occured, try again');
     }
 }
+?>

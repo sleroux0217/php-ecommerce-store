@@ -1,3 +1,4 @@
+<?php include('../server/connection.php'); ?>
 <?php
 if (isset($_GET['product_id'])) {
 
