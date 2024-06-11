@@ -1,5 +1,5 @@
 <?php
-session_start();
+include('init_session.php');
 include('server/connection.php');
 
 if (!isset($_SESSION['logged_in'])) {
@@ -18,22 +18,20 @@ if (isset($_GET['logout'])) {
 }
 
 if (isset($_POST['change_password'])) {
-
   $password = $_POST['password'];
   $confirmPassword = $_POST['confirmPassword'];
   $user_email = $_SESSION['user_email'];
 
-  //if passwords dont match
+  //if passwords don't match
   if ($password !== $confirmPassword) {
     header('location: account.php?error=passwords dont match');
 
-    //if passwod is less than 6 char
+    //if password is less than 6 char
   } else if (strlen($password) < 6) {
-    header('location: account.php?error=password must be at least 6 charachters');
+    header('location: account.php?error=password must be at least 6 characters');
 
     //no errors
   } else {
-
     $stmt = $conn->prepare("UPDATE users SET user_password=? WHERE user_email=?");
     $stmt->bind_param('ss', md5($password), $user_email);
 
@@ -47,17 +45,11 @@ if (isset($_POST['change_password'])) {
 
 //get orders
 if (isset($_SESSION['logged_in'])) {
-
   $user_id = $_SESSION['user_id'];
-
   $stmt = $conn->prepare("SELECT * FROM orders WHERE user_id=? ");
-
   $stmt->bind_param('i', $user_id);
-
   $stmt->execute();
-
   $orders = $stmt->get_result(); //[]
-
 }
 ?>
 

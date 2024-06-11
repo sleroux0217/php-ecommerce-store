@@ -1,14 +1,17 @@
 <?php
-if (isset($_GET['product_id'])) {
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
+if (isset($_GET['product_id'])) {
   $product_id = $_GET['product_id'];
   $product_name = $_GET['product_name'];
 } else {
   header('location: products.php');
 }
-?>
 
-<?php include('header.php') ?>
+include('header.php');
+?>
 
 <div class="container-fluid">
   <div class="row" style="min-height: 1000px">

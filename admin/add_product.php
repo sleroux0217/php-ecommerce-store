@@ -1,4 +1,9 @@
-<?php include('header.php'); ?>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+include('header.php');
+?>
 
 <div class="container-fluid">
   <div class="row" style="min-height: 1000px">

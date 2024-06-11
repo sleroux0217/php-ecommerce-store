@@ -1,5 +1,5 @@
 <?php
-session_start();
+include('init_session.php');
 /*
   not paid
   shipped
@@ -80,7 +80,7 @@ function calculateTotalOrderPrice($order_details)
         </td>
 
         <td>
-          <span>R<?php echo $row['product_price']; ?></span>
+          <span>R <?php echo $row['product_price']; ?></span>
         </td>
 
         <td>

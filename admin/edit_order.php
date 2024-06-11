@@ -1,6 +1,11 @@
 <?php
-if (isset($_GET['order_id'])) {
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
+include('../server/connection.php');
+
+if (isset($_GET['order_id'])) {
   $order_id = $_GET['order_id'];
   $stmt = $conn->prepare("SELECT * FROM orders WHERE order_id=?");
   $stmt->bind_param('i', $order_id);
@@ -9,7 +14,6 @@ if (isset($_GET['order_id'])) {
   $order = $stmt->get_result(); //[]
 
 } else if (isset($_POST['edit_order'])) {
-
   $order_status = $_POST['order_status'];
   $order_id = $_POST['order_id'];
 
@@ -22,11 +26,9 @@ if (isset($_GET['order_id'])) {
     header('location: index.php?order_failed=Error occured, try again');
   }
 } else {
-
   header('location: index.php');
   exit;
 }
-
 ?>
 
 <?php include('header.php'); ?>

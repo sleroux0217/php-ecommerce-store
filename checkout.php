@@ -1,5 +1,5 @@
 <?php
-session_start();
+include('init_session.php');
 if (!empty($_SESSION['cart'])) {
 
   //let user in

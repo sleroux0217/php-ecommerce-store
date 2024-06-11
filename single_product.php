@@ -1,5 +1,5 @@
 <?php
-session_start();
+include('init_session.php');
 include('server/connection.php');
 
 if (isset($_GET['product_id'])) {

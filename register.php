@@ -1,5 +1,5 @@
 <?php
-session_start();
+include('init_session.php');
 include('server/connection.php');
 
 //if user has already registered, then take user to account page            

@@ -6,7 +6,7 @@
     <h5 class="text-uppercase text-muted">New Arrivals</h5>
     <h1><span class="text-primary">Best Prices</span> This Season</h1>
     <p class="lead">Eshop offers the best products for the most affordable prices</p>
-    <button class="btn btn-primary btn-lg">Shop Now</button>
+    <a href="shop.php" class="btn btn-primary btn-lg">Shop Now</a>
   </div>
 </section>
 

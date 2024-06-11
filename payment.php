@@ -1,5 +1,5 @@
 <?php
-session_start();
+include('init_session.php');
 if (isset($_POST['order_pay_btn'])) {
   $order_status = $_POST['order_status'];
   $order_total_price = $_POST['order_total_price'];
@@ -23,7 +23,7 @@ if (isset($_POST['order_pay_btn'])) {
     <?php } else if (isset($_SESSION['total']) && $_SESSION['total'] != 0) { ?>
       <?php $amount = strval($_SESSION['total']); ?>
       <?php $order_id = $_SESSION['order_id']; ?>
-      <p>Total payment: <?php echo $_SESSION['total']; ?></p>
+      <p>Total payment: R <?php echo $_SESSION['total']; ?></p>
       <button class="btn btn-primary" id="pay-now-btn">Pay Now</button>
     <?php } else { ?>
       <p>You don't have an order</p>

@@ -1,14 +1,13 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 if (!isset($_SESSION['admin_logged_in'])) {
   header('location: login.php');
   exit();
 }
 
-?>
-
-<?php include('../server/connection.php'); ?>
-<?php
+include('../server/connection.php');
 
 //1. determine page no
 if (isset($_GET['page_no']) && $_GET['page_no'] != "") {
@@ -39,7 +38,6 @@ $adjacents = "2";
 $total_no_of_pages = ceil($total_records / $total_records_per_page);
 
 //4. get all products
-
 $stmt2 = $conn->prepare("SELECT * FROM products LIMIT $offset,$total_records_per_page");
 $stmt2->execute();
 $products = $stmt2->get_result();

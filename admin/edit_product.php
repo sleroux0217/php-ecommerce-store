@@ -1,7 +1,11 @@
-<?php include('../server/connection.php'); ?>
 <?php
-if (isset($_GET['product_id'])) {
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
+include('../server/connection.php');
+
+if (isset($_GET['product_id'])) {
   $product_id = $_GET['product_id'];
   $stmt = $conn->prepare("SELECT * FROM products WHERE product_id=?");
   $stmt->bind_param('i', $product_id);
@@ -10,7 +14,6 @@ if (isset($_GET['product_id'])) {
   $products = $stmt->get_result(); //[]
 
 } else if (isset($_POST['edit_btn'])) {
-
   $product_id = $_POST['product_id'];
   $title = $_POST['title'];
   $description = $_POST['description'];
@@ -19,8 +22,7 @@ if (isset($_GET['product_id'])) {
   $color = $_POST['color'];
   $category = $_POST['category'];
 
-  $stmt = $conn->prepare("UPDATE products SET product_name=?, product_description=?, product_price=?,
-                                product_special_offer=?, product_color=?, product_category=?  WHERE product_id=?");
+  $stmt = $conn->prepare("UPDATE products SET product_name=?, product_description=?, product_price=?, product_special_offer=?, product_color=?, product_category=? WHERE product_id=?");
   $stmt->bind_param('ssssssi', $title, $description, $price, $offer, $color, $category, $product_id);
 
   if ($stmt->execute()) {
@@ -32,7 +34,6 @@ if (isset($_GET['product_id'])) {
   header('location: products.php');
   exit;
 }
-
 ?>
 
 <?php include('header.php'); ?>
