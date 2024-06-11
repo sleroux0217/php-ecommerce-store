@@ -2,8 +2,8 @@
 
 include('../server/connection.php');
 
-if(isset($_POST['create_product'])){
-    // Extracting product details from the form
+if (isset($_POST['create_product'])) {
+
     $product_name = $_POST['name'];
     $product_description = $_POST['description'];
     $product_price = $_POST['price'];
@@ -11,50 +11,51 @@ if(isset($_POST['create_product'])){
     $product_category = $_POST['category'];
     $product_color = $_POST['color'];
 
-    // Validating and moving uploaded images
-    $imageNames = [];
-    $uploadErrors = [];
-    for ($i = 1; $i <= 4; $i++) {
-        $imageKey = 'image' . $i;
-        if(isset($_FILES[$imageKey]) && $_FILES[$imageKey]['error'] === UPLOAD_ERR_OK){
-            $tmpName = $_FILES[$imageKey]['tmp_name'];
-            $imageName = $product_name . $i . ".jpeg";
-            $destination = "../assets/images/products/" . $imageName;
-            if(move_uploaded_file($tmpName, $destination)){
-                $imageNames[] = $imageName;
-            }else{
-                $uploadErrors[] = "Failed to upload $imageKey";
-            }
-        }else{
-            $uploadErrors[] = "No file uploaded for $imageKey";
-        }
-    }
 
-    // Checking for upload errors
-    if(!empty($uploadErrors)){
-        header('location: products.php?product_failed=' . urlencode(implode(', ', $uploadErrors)));
-        exit();
-    }
+    //this is the file itself (image)
+    $image1 = $_FILES['image1']['tmp_name'];
+    $image2 = $_FILES['image2']['tmp_name'];
+    $image3 = $_FILES['image3']['tmp_name'];
+    $image4 = $_FILES['image4']['tmp_name'];
+    //$file_name = $_FILES['image1']['name'];
 
-    // Inserting product into database
-    $stmt = $conn->prepare("INSERT INTO products (product_name, product_description, product_price, product_special_offer,
-                                                  product_image, product_image2, product_image3, product_image4,
-                                                  product_category, product_color)
-                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-    // Binding parameters
-    $stmt->bind_param('ssssssssss', $product_name, $product_description, $product_price, $product_special_offer,
-                                 $imageNames[0], $imageNames[1], $imageNames[2], $imageNames[3],
-                                 $product_category, $product_color);
+    //image names
+    $image_name1 = $product_name . "1.jpeg"; //white shoes1.jpeg
+    $image_name2 = $product_name . "2.jpeg"; //white shoes2.jpeg
+    $image_name3 = $product_name . "3.jpeg";
+    $image_name4 = $product_name . "4.jpeg";
 
-    // Executing the statement
-    if($stmt->execute()){
+    //upload images
+    move_uploaded_file($image1, "../assets/images/products/" . $image_name1);
+    move_uploaded_file($image2, "../assets/images/products/" . $image_name2);
+    move_uploaded_file($image3, "../assets/images/products/" . $image_name3);
+    move_uploaded_file($image4, "../assets/images/products/" . $image_name4);
+
+
+    //create a new user
+    $stmt = $conn->prepare("INSERT INTO products (product_name,product_description,product_price,product_special_offer,
+                                                product_image,product_image2,product_image3,product_image4,
+                                                product_category,product_color)
+                                                VALUES (?,?,?,?,?,?,?,?,?,?)");
+
+    $stmt->bind_param(
+        'ssssssssss',
+        $product_name,
+        $product_description,
+        $product_price,
+        $product_special_offer,
+        $image_name1,
+        $image_name2,
+        $image_name3,
+        $image_name4,
+        $product_category,
+        $product_color
+    );
+
+    if ($stmt->execute()) {
         header('location: products.php?product_created=Product has been created successfully');
-        exit();
-    }else{
-        header('location: products.php?product_failed=Error occurred while creating the product');
-        exit();
+    } else {
+        header('location: products.php?product_failed=Error occured, try again');
     }
 }
-
-?>
